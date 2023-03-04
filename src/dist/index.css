@@ -1,0 +1,126 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: hsl(225deg, 100%, 94%);
+  display: grid;
+  place-items: center;
+  font-family: "Red Hat Display", sans-serif;
+  text-align: center;
+}
+
+.attribution {
+  display: none;
+}
+
+.card {
+  height: 550px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: 0.75rem;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+}
+.card .card__image,
+.card .card__body {
+  width: 100%;
+}
+.card .card__image {
+  height: 30%;
+}
+.card .card__image img {
+  max-width: 100%;
+  border-radius: 0.75rem 0.75rem 0 0;
+}
+.card .card__body {
+  display: flex;
+  align-items: center;
+  height: 70%;
+  flex-direction: column;
+  justify-content: end;
+  position: relative;
+}
+.card .card__body .title {
+  font-size: 1.5rem;
+  font-weight: 900;
+  position: absolute;
+  color: hsl(223deg, 47%, 23%);
+  top: 2rem;
+}
+.card .card__body .description {
+  position: absolute;
+  top: 4.5rem;
+  line-height: 1.5;
+  width: 85%;
+  margin-bottom: 2rem;
+  color: hsl(224deg, 23%, 55%);
+}
+.card .card__body .subscription,
+.card .card__body .payment-btn {
+  position: absolute;
+  margin-bottom: 0.5rem;
+  width: 85%;
+  padding: 0.7rem;
+  border-radius: 0.45rem;
+}
+.card .card__body .subscription {
+  display: flex;
+  align-items: center;
+  bottom: 9rem;
+  justify-content: space-between;
+  background: hsl(225deg, 100%, 98%);
+}
+.card .card__body .subscription__group {
+  display: flex;
+  align-items: center;
+}
+.card .card__body .subscription__img {
+  margin-right: 1.2rem;
+}
+.card .card__body .subscription__desc div:first-child {
+  margin-top: -0.25rem;
+  font-weight: 700;
+}
+.card .card__body .subscription__desc div:nth-child(2) {
+  color: hsl(224deg, 23%, 55%);
+}
+.card .card__body .subscription__link a {
+  color: hsl(245deg, 75%, 52%);
+  text-decoration: underline;
+}
+.card .card__body .subscription__link a:hover {
+  color: #766cea;
+  text-decoration: none;
+}
+.card .card__body .payment-btn {
+  bottom: 4.5rem;
+  background: hsl(245deg, 75%, 52%);
+  color: hsl(225deg, 100%, 98%);
+  box-shadow: 2px 8px 8px rgba(0, 0, 0, 0.06), 4px 8px 16px rgba(0, 0, 0, 0.08), 4px 16px 24px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+}
+.card .card__body .payment-btn:hover {
+  cursor: pointer;
+  background: #766cea;
+  box-shadow: 2px 32px 15px rgba(0, 0, 0, 0.05), 4px 12px 15px rgba(0, 0, 0, 0.075), 6px 12px 15px rgba(0, 0, 0, 0.01);
+}
+.card .card__body .cancel-btn {
+  position: absolute;
+  bottom: 2.5rem;
+  color: hsl(224deg, 23%, 55%);
+  border-radius: none;
+  font-weight: 700;
+}
+.card .card__body .cancel-btn:hover {
+  cursor: pointer;
+  color: hsl(223deg, 47%, 23%);
+}

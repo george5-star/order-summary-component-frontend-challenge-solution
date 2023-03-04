@@ -1,0 +1,18 @@
+//import typeface from google here
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;700;900&display=swap");
+
+$primary-color-1: hsl(225, 100%, 94%);
+$primary-color-2: hsl(245, 75%, 52%);
+$neutral-color-1: hsl(225, 100%, 98%);
+$neutral-color-2: hsl(224, 23%, 55%);
+$neutral-color-3: hsl(223, 47%, 23%);
+$fz-primary: 16px;
+$box-shadow-normal: 2px 8px 8px rgba(0, 0, 0, 0.06),
+  4px 8px 16px rgba(0, 0, 0, 0.08), 4px 16px 24px rgba(0, 0, 0, 0.1);
+$box-shadow-hover: 2px 32px 15px rgba(0, 0, 0, 0.05),
+  4px 12px 15px rgba(0, 0, 0, 0.075), 6px 12px 15px rgba(0, 0, 0, 0.01);
+$ff-primary: "Red Hat Display", sans-serif;
+$border-radius: 0.75rem;
+$fw-normal: 500;
+$fw-medium: 700;
+$fw-large: 900;

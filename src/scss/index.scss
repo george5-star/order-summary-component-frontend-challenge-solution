@@ -1,0 +1,141 @@
+@import "_variables";
+@import "_config";
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  overflow: hidden;
+  background: $primary-color-1;
+  display: grid;
+  place-items: center;
+  font-family: $ff-primary;
+  text-align: center;
+}
+
+.attribution {
+  display: none;
+}
+
+.card {
+  height: 550px;
+  width: 100%;
+  max-width: 350px;
+  border-radius: $border-radius;
+  background: #fff;
+  display: flex;
+  flex-direction: column;
+
+  .card__image,
+  .card__body {
+    width: 100%;
+  }
+
+  .card__image {
+    height: 30%;
+
+    img {
+      max-width: 100%;
+      border-radius: $border-radius $border-radius 0 0;
+    }
+  }
+
+  .card__body {
+    @include flexit;
+    height: 70%;
+    flex-direction: column;
+    justify-content: end;
+    position: relative;
+
+    .title {
+      font-size: 1.5rem;
+      font-weight: $fw-large;
+      position: absolute;
+      color: $neutral-color-3;
+      top: 2rem;
+    }
+
+    .description {
+      position: absolute;
+      top: 4.5rem;
+      line-height: 1.5;
+      width: 85%;
+      margin-bottom: 2rem;
+      color: $neutral-color-2;
+    }
+
+    .subscription,
+    .payment-btn {
+      @include spacing;
+    }
+
+    .subscription {
+      @include flexit;
+      bottom: 9rem;
+      justify-content: space-between;
+      background: $neutral-color-1;
+
+      &__group {
+        @include flexit;
+      }
+
+      &__img {
+        margin-right: 1.2rem;
+      }
+
+      &__desc {
+        div:first-child {
+          margin-top: -0.25rem;
+          font-weight: $fw-medium;
+        }
+
+        div:nth-child(2) {
+          color: $neutral-color-2;
+        }
+      }
+
+      &__link a {
+        color: $primary-color-2;
+        text-decoration: underline;
+
+        &:hover {
+          color: lighten($primary-color-2, 15%);
+          text-decoration: none;
+        }
+      }
+    }
+
+    .payment-btn {
+      bottom: 4.5rem;
+      background: $primary-color-2;
+      color: $neutral-color-1;
+      box-shadow: $box-shadow-normal;
+      padding: 1rem;
+
+      &:hover {
+        cursor: pointer;
+        background: lighten($primary-color-2, 15%);
+        box-shadow: $box-shadow-hover;
+      }
+    }
+
+    .cancel-btn {
+      position: absolute;
+      bottom: 2.5rem;
+      color: $neutral-color-2;
+      border-radius: none;
+      font-weight: $fw-medium;
+
+      &:hover {
+        cursor: pointer;
+        color: $neutral-color-3;
+      }
+    }
+  }
+}

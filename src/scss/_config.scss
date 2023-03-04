@@ -1,0 +1,12 @@
+@mixin flexit() {
+    display: flex;
+    align-items: center;
+}
+
+@mixin spacing(){
+    position: absolute;
+    margin-bottom: .5rem;
+    width: 85%;
+    padding: .7rem;
+    border-radius: .45rem;
+}
